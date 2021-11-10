@@ -1470,7 +1470,8 @@ static void nvt_esd_check_func(struct work_struct *work)
 
 	//NVT_LOG("esd_check = %d (retry %d)\n", esd_check, esd_retry);	//DEBUG
 
-	if ((timer > NVT_TOUCH_ESD_CHECK_PERIOD) && esd_check) {
+	if ((timer > NVT_TOUCH_ESD_CHECK_PERIOD + 50)
+		&& (timer < 2 * NVT_TOUCH_ESD_CHECK_PERIOD - 50) && esd_check) {	if ((timer > NVT_TOUCH_ESD_CHECK_PERIOD) && esd_check) {
 		mutex_lock(&ts->lock);
 		NVT_ERR("do ESD recovery, timer = %d, retry = %d\n", timer, esd_retry);
 		/* do esd recovery, reload fw */
