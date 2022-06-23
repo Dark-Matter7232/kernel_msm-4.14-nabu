@@ -3971,7 +3971,7 @@
 		};
 
 		wcd_usbc_analog_en2 {
-			wcd_usbc_analog_en2_idle: wcd_usbc_ana_en2_idle {
+			wcd_usbc_analog_en2n_idle: wcd_usbc_ana_en2n_idle {
 				mux {
 					pins = "gpio58";
 					function = "gpio";
@@ -3984,7 +3984,7 @@
 				};
 			};
 
-			wcd_usbc_analog_en2_active: wcd_usbc_ana_en2_active {
+			wcd_usbc_analog_en2n_active: wcd_usbc_ana_en2n_active {
 				mux {
 					pins = "gpio58";
 					function = "gpio";
