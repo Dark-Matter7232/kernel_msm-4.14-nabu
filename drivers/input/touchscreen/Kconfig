@@ -1297,5 +1297,7 @@ config TOUCHSCREEN_RAYDIUM_CHIPSET
 	  If unsure, say N.
 
 source "drivers/input/touchscreen/focaltech_touch/Kconfig"
+source "drivers/input/touchscreen/xiaomi/Kconfig"
+source "drivers/input/touchscreen/nt36523/Kconfig"
 
 endif
