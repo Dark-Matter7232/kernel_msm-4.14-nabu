@@ -20,3 +20,5 @@
 	qcom,pmic-name = "PM8150";
 	qcom,board-id = <0 0>;
 };
+
+#include "sm8150-gpu-oc.dtsi"
