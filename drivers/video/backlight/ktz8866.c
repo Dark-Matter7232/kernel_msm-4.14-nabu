@@ -23,6 +23,11 @@
 #include <linux/platform_data/ktz8866.h>
 #include <linux/slab.h>
 
+#undef dev_warn
+#define dev_warn(x, ...)
+#undef dev_err
+#define dev_err(x, ...)
+
 #define u8	unsigned char
 
 struct ktz8866 {
