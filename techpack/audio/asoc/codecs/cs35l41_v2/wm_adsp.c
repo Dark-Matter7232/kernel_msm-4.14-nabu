@@ -38,23 +38,14 @@
 #define MAX_BULKSIZE			1024
 #define REG_BYTESIZE			4
 
-#define adsp_crit(_dsp, fmt, ...) \
-	dev_crit(_dsp->dev, "%s: " fmt, _dsp->name, ##__VA_ARGS__)
-#define adsp_err(_dsp, fmt, ...) \
-	dev_err(_dsp->dev, "%s: " fmt, _dsp->name, ##__VA_ARGS__)
-#define adsp_warn(_dsp, fmt, ...) \
-	dev_warn(_dsp->dev, "%s: " fmt, _dsp->name, ##__VA_ARGS__)
-#define adsp_info(_dsp, fmt, ...) \
-	dev_info(_dsp->dev, "%s: " fmt, _dsp->name, ##__VA_ARGS__)
-#define adsp_dbg(_dsp, fmt, ...) \
-	dev_dbg(_dsp->dev, "%s: " fmt, _dsp->name, ##__VA_ARGS__)
+#define adsp_crit(x, ...)
+#define adsp_err(x, ...)
+#define adsp_warn(x, ...)
+#define adsp_info(x, ...)
+#define adsp_dbg(x, ...)
 
-#define compr_err(_obj, fmt, ...) \
-	adsp_err(_obj->dsp, "%s: " fmt, _obj->name ? _obj->name : "legacy", \
-		 ##__VA_ARGS__)
-#define compr_dbg(_obj, fmt, ...) \
-	adsp_dbg(_obj->dsp, "%s: " fmt, _obj->name ? _obj->name : "legacy", \
-		 ##__VA_ARGS__)
+#define compr_err(x, ...)
+#define compr_dbg(x, ...)
 
 #define ADSP1_CONTROL_1                   0x00
 #define ADSP1_CONTROL_2                   0x02
