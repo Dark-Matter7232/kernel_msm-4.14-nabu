@@ -38,6 +38,23 @@
 #define ds_err	pr_err
 #define ds_log	pr_err
 
+#undef dev_info
+#define dev_info(x, ...)
+#undef dev_dbg
+#define dev_dbg(x, ...)
+#undef dev_err
+#define dev_err(x, ...)
+#undef pr_info
+#define pr_info(x, ...)
+#undef pr_debug
+#define pr_debug(x, ...)
+#undef pr_error
+#define pr_error(x, ...)
+#undef printk
+#define printk(x, ...)
+#undef printk_deferred
+#define printk_deferred(x, ...)
+
 struct ds28e16_data {
 	struct platform_device *pdev;
 	struct device *dev;
@@ -618,9 +635,9 @@ int DS28E16_cmd_device_disable_slave(int op, unsigned char *password)
 /// 'Compute and Read Page Authentication' command
 ///
 /// @param[in] anon - boolean parameter
-/// @param[in] pg - Page number   2,¿¿¿? 0,page0; 1,page1;
+/// @param[in] pg - Page number   2,ï¿½ï¿½ï¿½? 0,page0; 1,page1;
 /// @param[in] challenge_slave
-/// @param[out] hmac   ¿¿¿¿¿¿¿?2¿¿¿?///
+/// @param[out] hmac   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?2ï¿½ï¿½ï¿½?///
 /// @return
 /// DS_TRUE - command successful @n
 /// DS_FALSE - command failed
@@ -696,8 +713,8 @@ unsigned char *challenge_slave, unsigned char *hmac)
 ///
 /// @param[in] anon - boolean parameter
 /// @param[in] bdconst - boolean parameter
-/// @param[in] pg - Page number   ¿¿
-/// @param[in] partial secret   32¿¿¿¿¿¿
+/// @param[in] pg - Page number   ï¿½ï¿½
+/// @param[in] partial secret   32ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ///
 /// @return
 /// DS_TRUE - command successful @n

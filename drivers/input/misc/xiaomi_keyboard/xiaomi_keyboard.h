@@ -9,8 +9,8 @@
 #include <linux/power_supply.h>
 
 #define XIAOMI_KB_TAG "xiaomi-keyboard"
-#define MI_KB_INFO(fmt, args...)    pr_info("[%s] %s %d: " fmt, XIAOMI_KB_TAG, __func__, __LINE__, ##args)
-#define MI_KB_ERR(fmt, args...)    pr_err("[%s] %s %d: " fmt, XIAOMI_KB_TAG, __func__, __LINE__, ##args)
+#define MI_KB_INFO(fmt, args...)
+#define MI_KB_ERR(fmt, args...)
 
 struct xiaomi_keyboard_platdata {
 	u32 rst_gpio;

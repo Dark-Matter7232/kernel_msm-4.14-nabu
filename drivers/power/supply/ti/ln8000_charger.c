@@ -40,29 +40,28 @@
 #include "ln8000_charger.h"
 #include "cp_qc30.h"
 
-#define ln_err(fmt, ...)                \
-do {                                    \
-    if (info->dev_role == LN_PRIMARY)   \
-        printk(KERN_ERR "ln8000@pri: %s: " fmt, __func__, ##__VA_ARGS__);   \
-    else                                                                    \
-        printk(KERN_ERR "ln8000@sec: %s: " fmt, __func__, ##__VA_ARGS__);   \
-} while (0);
+#undef dev_info
+#define dev_info(x, ...)
+#undef dev_dbg
+#define dev_dbg(x, ...)
+#undef dev_err
+#define dev_err(x, ...)
+#undef pr_info
+#define pr_info(x, ...)
+#undef pr_debug
+#define pr_debug(x, ...)
+#undef pr_error
+#define pr_error(x, ...)
+#undef printk
+#define printk(x, ...)
+#undef printk_deferred
+#define printk_deferred(x, ...)
 
-#define ln_info(fmt, ...)               \
-do {                                    \
-    if (info->dev_role == LN_PRIMARY)   \
-        printk(KERN_INFO "ln8000@pri: %s: " fmt, __func__, ##__VA_ARGS__);  \
-    else                                                                    \
-        printk(KERN_INFO "ln8000@sec: %s: " fmt, __func__, ##__VA_ARGS__);  \
-} while (0);
+#define ln_err(fmt, ...)
 
-#define ln_dbg(fmt, ...)                \
-do {                                    \
-    if (info->dev_role == LN_PRIMARY)   \
-        printk(KERN_DEBUG "ln8000@pri: %s: " fmt, __func__, ##__VA_ARGS__); \
-    else                                                                    \
-        printk(KERN_DEBUG "ln8000@sec: %s: " fmt, __func__, ##__VA_ARGS__); \
-} while (0);
+#define ln_info(fmt, ...)
+
+#define ln_dbg(fmt, ...)
 
 #define LN8000_REG_PRINT(reg_addr, val)                         \
 do {                                                            \

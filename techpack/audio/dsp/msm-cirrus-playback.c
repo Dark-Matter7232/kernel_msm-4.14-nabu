@@ -35,14 +35,35 @@
 #undef pr_info
 #undef pr_err
 #undef pr_debug
-#define pr_debug(fmt, args...) printk(KERN_INFO "[CSPL] " pr_fmt(fmt), ##args)
-#define pr_info(fmt, args...) printk(KERN_INFO "[CSPL] " pr_fmt(fmt), ##args)
-#define pr_err(fmt, args...) printk(KERN_ERR "[CSPL] " pr_fmt(fmt), ##args)
+#define pr_debug(fmt, args...)
+#define pr_info(fmt, args...)
+#define pr_err(fmt, args...)
 #define CRUS_TX_CONFIG "crus_sp_tx%d.bin"
 #define CRUS_RX_CONFIG "crus_sp_rx%d.bin"
 
 #define CIRRUS_RX_GET_IODATA 0x00A1AF09
 #define CIRRUS_TX_GET_IODATA 0x00A1BF09
+
+#undef dev_info
+#define dev_info(x, ...)
+#undef dev_dbg
+#define dev_dbg(x, ...)
+#undef dev_err
+#define dev_err(x, ...)
+#undef pr_info
+#define pr_info(x, ...)
+#undef pr_debug
+#define pr_debug(x, ...)
+#undef pr_error
+#define pr_error(x, ...)
+#undef printk
+#define printk(x, ...)
+#undef printk_deferred
+#define printk_deferred(x, ...)
+#undef dev_warn
+#define dev_warn(x, ...)
+#undef dev_err
+#define dev_err(x, ...)
 
 static struct crus_sp_ioctl_header crus_sp_hdr;
 #define xCACHE_COMMANDS
