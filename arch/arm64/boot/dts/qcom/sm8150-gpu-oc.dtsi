@@ -16,32 +16,32 @@
 
 		opp-585000000 {
 			opp-hz = /bits/ 64 <585000000>;
-			opp-microvolt = <140>; // MIN
+			opp-microvolt = <160>; // MIN
 		};
 
 		opp-499200000 {
 			opp-hz = /bits/ 64 <499200000>;
-			opp-microvolt = <70>; // MIN
+			opp-microvolt = <110>; // MIN
 		};
 
 		opp-427000000 {
 			opp-hz = /bits/ 64 <427000000>;
-			opp-microvolt = <50>; // MIN
+			opp-microvolt = <100>; // MIN
 		};
 
 		opp-345000000 {
 			opp-hz = /bits/ 64 <345000000>;
-			opp-microvolt = <40>; // MIN
+			opp-microvolt = <80>; // MIN
 		};
 
 		opp-257000000 {
 			opp-hz = /bits/ 64 <257000000>;
-			opp-microvolt = <25>; // MIN
+			opp-microvolt = <65>; // MIN
 		};
 
 		opp-150000000 {
 			opp-hz = /bits/ 64 <150000000>;
-			opp-microvolt = <20>; // MIN
+			opp-microvolt = <50>; // MIN
 		};
 	};
 };
