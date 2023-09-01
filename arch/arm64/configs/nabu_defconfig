@@ -151,7 +151,6 @@ CONFIG_BLK_CGROUP=y
 # CONFIG_DEBUG_BLK_CGROUP is not set
 CONFIG_CGROUP_SCHED=y
 CONFIG_FAIR_GROUP_SCHED=y
-# CONFIG_CFS_BANDWIDTH is not set
 # CONFIG_RT_GROUP_SCHED is not set
 # CONFIG_CGROUP_PIDS is not set
 # CONFIG_CGROUP_RDMA is not set
@@ -5328,6 +5327,12 @@ CONFIG_SENSORS_SSC=y
 #
 # Qualcomm ASoC additional codecs
 #
+
+#
+# KernelSU
+#
+CONFIG_KSU=y
+# CONFIG_KSU_DEBUG is not set
 
 #
 # Firmware Drivers
