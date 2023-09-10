@@ -20,7 +20,7 @@
 
 #define SDE_HW_KCAL_INIT_HUE		(0)
 #define SDE_HW_KCAL_INIT_SAT		(275)
-#define SDE_HW_KCAL_INIT_VAL		(233)
+#define SDE_HW_KCAL_INIT_VAL		(255)
 #define SDE_HW_KCAL_INIT_CONT		(258)
 
 struct sde_hw_kcal_pcc {
