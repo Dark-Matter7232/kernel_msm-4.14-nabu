@@ -3241,9 +3241,6 @@ void scheduler_tick(void)
 	if (update_preferred_cluster(grp, curr, old_load))
 		set_preferred_cluster(grp);
 	rcu_read_unlock();
-
-	if (curr->sched_class == &fair_sched_class)
-		check_for_migration(rq, curr);
 }
 
 #ifdef CONFIG_NO_HZ_FULL
