@@ -12971,4 +12971,6 @@ void walt_rotate_work_init(void)
 		INIT_WORK(&wr->w, walt_rotate_work_func);
 	}
 }
+#endif
+
 #endif /* CONFIG_SCHED_WALT */
