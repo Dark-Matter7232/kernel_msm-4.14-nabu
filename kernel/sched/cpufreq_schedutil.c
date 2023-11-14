@@ -724,8 +724,8 @@ static void sugov_tunables_restore(struct cpufreq_policy *policy)
 	if (!cached)
 		return;
 
-	tunables->up_rate_limit_us = cached->up_rate_limit_us;
-	tunables->down_rate_limit_us = cached->down_rate_limit_us;
+	tunables->up_rate_limit_us = 500;
+	tunables->down_rate_limit_us = 1000;
 	update_min_rate_limit_ns(sg_policy);
 }
 
