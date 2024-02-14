@@ -88,6 +88,9 @@ ifeq ($(CONFIG_COMPAT_VDSO), y)
     vdso32 := -DCONFIG_VDSO32=1
   endif
 endif
+ifeq ($(CONFIG_ARCH_SM8150), y)
+KBUILD_CFLAGS  += -mcpu=cortex-a76.cortex-a55
+endif
 KBUILD_CFLAGS	+= -mgeneral-regs-only $(lseinstr) $(brokengasinst) $(vdso32)
 KBUILD_CFLAGS	+= -fno-asynchronous-unwind-tables
 KBUILD_CFLAGS	+= -fno-pic
