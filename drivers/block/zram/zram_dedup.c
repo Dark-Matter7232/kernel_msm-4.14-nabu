@@ -247,7 +247,7 @@ int zram_dedup_init(struct zram *zram, size_t num_pages)
 	return 0;
 }
 
-void zram_dedup_fini(struct zram *zram)
+void zram_dedup_deinit(struct zram *zram)
 {
 	vfree(zram->hash);
 	zram->hash = NULL;

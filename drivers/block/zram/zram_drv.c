@@ -1210,7 +1210,7 @@ static void zram_meta_free(struct zram *zram, u64 disksize)
 		zram_free_page(zram, index);
 
 	zs_destroy_pool(zram->mem_pool);
-	zram_dedup_fini(zram);
+	zram_dedup_deinit(zram);
 	vfree(zram->table);
 }
 
