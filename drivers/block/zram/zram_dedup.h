@@ -19,7 +19,7 @@ void zram_dedup_init_entry(struct zram *zram, struct zram_entry *entry,
 bool zram_dedup_put_entry(struct zram *zram, struct zram_entry *entry);
 
 int zram_dedup_init(struct zram *zram, size_t num_pages);
-void zram_dedup_fini(struct zram *zram);
+void zram_dedup_deinit(struct zram *zram);
 #else
 
 static inline u64 zram_dedup_dup_size(struct zram *zram) { return 0; }
@@ -38,7 +38,7 @@ static inline bool zram_dedup_put_entry(struct zram *zram,
 
 static inline int zram_dedup_init(struct zram *zram,
 			size_t num_pages) { return 0; }
-static inline void zram_dedup_fini(struct zram *zram) { }
+static inline void zram_dedup_deinit(struct zram *zram) { }
 
 #endif
 
