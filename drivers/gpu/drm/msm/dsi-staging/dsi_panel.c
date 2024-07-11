@@ -5638,7 +5638,7 @@ int dsi_panel_match_fps_pen_setting(struct dsi_panel *panel,
 		retval = -EAGAIN;
 		goto error;
 	}else
-		pr_info("%s: refresh_rate[%d]\n", __func__, adj_mode->timing.refresh_rate);
+		pr_debug_ratelimited("%s: refresh_rate[%d]\n", __func__, adj_mode->timing.refresh_rate);
 
 error:
 	return retval;
