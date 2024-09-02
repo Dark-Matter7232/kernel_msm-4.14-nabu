@@ -249,10 +249,15 @@ static bool is_cool_charge(struct usbpd_pm *pdpm)
 /* get bq27z561 fastcharge mode to enable or disabled */
 static bool pd_get_bms_digest_verified(struct usbpd_pm *pdpm)
 {
+	return true;	/* Always return true */
+
+	// The following code is now unnecessary and can be removed
+
+	/*
 	union power_supply_propval pval = {0,};
 	int rc;
 
-	return true;	/*for temp debug*/
+	return true;	//for temp debug
 
 	if (!pdpm->bms_psy)
 		return false;
@@ -270,6 +275,7 @@ static bool pd_get_bms_digest_verified(struct usbpd_pm *pdpm)
 		return true;
 	else
 		return false;
+	*/
 }
 
 /* get pd pps charger verified result  */
