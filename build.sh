@@ -73,9 +73,9 @@ build_kernel_image() {
     echo -e "${YELLOW}"
     script_echo "Building CosmicFresh Kernel For $DEVICE"
 
-    eval make "$MAKE" LOCALVERSION="—CosmicFresh-R$KV" $CONFIG 2>&1 | sed 's/^/     /'
+    eval make "$MAKE" LOCALVERSION="—CosmicFresh" $CONFIG 2>&1 | sed 's/^/     /'
     echo -e "${YELLOW}"
-    eval make "$MAKE" LOCALVERSION="—CosmicFresh-R$KV" 2>&1 | sed 's/^/     /'
+    eval make "$MAKE" LOCALVERSION="—CosmicFresh" 2>&1 | sed 's/^/     /'
 
     SUCCESS=$?
     echo -e "${RST}"
