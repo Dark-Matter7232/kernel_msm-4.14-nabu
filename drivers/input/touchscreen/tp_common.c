@@ -17,6 +17,7 @@ TS_ENABLE_FOPS(capacitive_keys)
 TS_ENABLE_FOPS(double_tap)
 TS_ENABLE_FOPS(reversed_keys)
 TS_ENABLE_FOPS(pen)
+TS_ENABLE_FOPS(pen_gen2_force)
 
 static int __init tp_common_init(void)
 {
