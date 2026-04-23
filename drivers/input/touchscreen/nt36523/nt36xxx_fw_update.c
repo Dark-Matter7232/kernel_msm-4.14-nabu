@@ -340,10 +340,10 @@ static int32_t update_firmware_request(const char *filename)
 
 		if (lockdown[1] == 0x42) {
 			pr_info("[touch]: cur csot Display panel use 0042 firmware\n");
-			filename = "novatek_nt36523_fw01_0042.bin";
+			filename = "novatek_nt36523_k82_fw01_0042.bin";
 		} else if (lockdown[1] == 0x36) {
 			pr_info("[touch]: cur tianma Display panel use 0036 firmware\n");
-			filename = "novatek_nt36523_fw02_0036.bin";
+			filename = "novatek_nt36523_k82_fw02_0036.bin";
 		}
 	}
 #endif
